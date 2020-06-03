@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="225821" started-at="2020-06-01T17:06:32Z" finished-at="2020-06-01T17:10:17Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="225821" started-at="2020-06-01T17:06:32Z" finished-at="2020-06-01T17:10:17Z">
+      <class name="testCases.Admin_UserPageTest">
+        <test-method status="PASS" signature="testSetUp()[pri:0, instance:testCases.Admin_UserPageTest@1ec71f8]" name="testSetUp" is-config="true" duration-ms="17515" started-at="2020-06-01T22:36:32Z" finished-at="2020-06-01T22:36:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSetUp -->
+        <test-method status="PASS" signature="verifyIfUserExistsInTheSystem()[pri:0, instance:testCases.Admin_UserPageTest@1ec71f8]" name="verifyIfUserExistsInTheSystem" duration-ms="208273" started-at="2020-06-01T22:36:49Z" finished-at="2020-06-01T22:40:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyIfUserExistsInTheSystem -->
+      </class> <!-- testCases.Admin_UserPageTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

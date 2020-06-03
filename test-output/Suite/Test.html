@@ -1,0 +1,104 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri May 29 22:48:44 IST 2020</td>
+</tr>
+<tr><td>Total time:</td><td>123 seconds (123297 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testCases.Admin_SettingsPageTest.createNewMediaGroups()'><b>createNewMediaGroups</b><br>Test class: testCases.Admin_SettingsPageTest<br>Test method: Creating a new Media Group</td>
+<td></td>
+<td>10</td>
+<td>testCases.Admin_SettingsPageTest@e9a829</td></tr>
+<tr>
+<td title='testCases.Admin_UserPageTest.createNewUsers()'><b>createNewUsers</b><br>Test class: testCases.Admin_UserPageTest<br>Test method: Creating new users in the system<br>Parameters: Test, User, TestUser@yopmail.com, 654321, 654321, Test_UAT1, Test_UAT2, Test_UAT3, Test_UAT4, Test_UAT5, Test_UAT6, Test_UAT7, Test_UAT8, Test_UAT9, Test_UAT10, NA, PRO, QA, Admin</td>
+<td></td>
+<td>18</td>
+<td>testCases.Admin_UserPageTest@18a00e3</td></tr>
+<tr>
+<td title='testCases.DashboardPageTest.navigateToAdminPage()'><b>navigateToAdminPage</b><br>Test class: testCases.DashboardPageTest</td>
+<td></td>
+<td>6</td>
+<td>testCases.DashboardPageTest@13f2bb1</td></tr>
+<tr>
+<td title='testCases.LoginPageTest.validateUserLogin()'><b>validateUserLogin</b><br>Test class: testCases.LoginPageTest<br>Test method: Verify login functionality</td>
+<td></td>
+<td>8</td>
+<td>testCases.LoginPageTest@2f32ff</td></tr>
+<tr>
+<td title='testCases.LoginPageTest.validateUserLoginElementsAreDisplayed()'><b>validateUserLoginElementsAreDisplayed</b><br>Test class: testCases.LoginPageTest<br>Test method: Verify login page elements are displayed</td>
+<td></td>
+<td>0</td>
+<td>testCases.LoginPageTest@2f32ff</td></tr>
+</table><p>
+</body>
+</html>
