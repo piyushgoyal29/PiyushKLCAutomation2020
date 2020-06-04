@@ -12,6 +12,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -26,6 +27,8 @@ public class CommonUtilities
 	public static WebDriver driver;
 	public Logger log = Logger.getLogger(CommonUtilities.class);
 	public Actions actions;
+	public static WebDriverEventListenerClass webDriverListener;
+	public static EventFiringWebDriver eventFiringDriver;
 //	public static ExtentTest extentTest;
 	
 	public void invokeBrowser() 

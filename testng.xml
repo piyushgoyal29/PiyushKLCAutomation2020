@@ -3,6 +3,7 @@
 <suite name="Suite" verbose="2">
 	<listeners>
 		<listener class-name="utils.ITestListenerClass" />
+<!-- 		<listener class-name="utils.IAnnotationTransformerClass" /> -->
 	</listeners>
   <test name="Test">
     <classes>
