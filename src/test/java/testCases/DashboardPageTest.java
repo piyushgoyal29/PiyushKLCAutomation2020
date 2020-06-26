@@ -3,6 +3,7 @@ package testCases;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
+import org.sikuli.script.FindFailed;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,8 +14,9 @@ import pageRepository.LoginPage;
 import utils.CommonUtilities;
 import utils.ReadPdfFile;
 import utils.ReadPropertiesFile;
+import utils.SikuliClass;
 
-public class DashboardPageTest 
+public class DashboardPageTest extends CommonUtilities
 {
 //	WebDriver driver;
 	CommonUtilities commonUtilities = new CommonUtilities();
@@ -51,13 +53,41 @@ public class DashboardPageTest
 		String actualURL = commonUtilities.verifyURLMethod();
 		Assert.assertEquals(actualURL, ReadPropertiesFile.getPropertyValue("reportsPageUrl"), "Validating Admin Page URL");
 	}
+
+	/*
+	 * Note that below @Test automateVideoSessions() method was created for understanding purpose.
+	 * But actual code is not implemented due to inconsistency of KLC.
+	 * So I have commented the code. 
+	 */
+//	@Test
+//	public void automateVideoSessions() throws InterruptedException
+//	{
+//		dashboardPage.automateVideoSessions();
+//	}
 	
-	@Test
-	public void automateVideoSessions() throws InterruptedException
-	{
-		dashboardPage.automateVideoSessions();
-	}
+	/*
+	 * Note that below @Test automateVideoSessionsUsingSikuli() method was created to understand SIKULI tool.
+	 * But actual code is not implemented due to inconsistency of KLC.
+	 * So I have commented the code. 
+	 */
+//	@Test
+//	public void automateVideoSessionsUsingSikuli() throws InterruptedException, FindFailed
+//	{
+//		driver.get("https://edulence.knowledgelink.tv/session/videonew/course/uatnew");
+//		Thread.sleep(10000);
+//		SikuliClass.clickMethod("start.png");
+//		SikuliClass.clickMethod("pause.jpg");
+//		SikuliClass.clickMethod("mute.jpg");
+//		SikuliClass.clickMethod("settings.jpg");
+//		SikuliClass.clickMethod("newSpeed.jpg");
+//		SikuliClass.clickMethod("newSpeed.jpg");	
+//	}
 	
+	/*
+	 * Note that below @Test automatePdfSessions() method was created to understand PDF Comparison.
+	 * But the code is not behaving as expected.
+	 * So I have commented the code. 
+	 */
 //	@Test
 //	public void automatePdfSessions() throws InterruptedException, IOException
 //	{
@@ -72,7 +102,7 @@ public class DashboardPageTest
 	@AfterMethod
 	public void tearDown()
 	{
-//		commonUtilities.quitBrowserMethod();
+		commonUtilities.quitBrowserMethod();
 	}
 	
 }

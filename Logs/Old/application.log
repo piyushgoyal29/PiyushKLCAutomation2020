@@ -1,0 +1,161 @@
+2020-06-11 16:20:40,156  INFO [main] CommonUtilities:25 - ##############################################################
+2020-06-11 16:20:40,163  INFO [main] CommonUtilities:26 - Starting execution of Test Suite
+2020-06-11 16:20:40,366  INFO [main] CommonUtilities:49 - Start: Trying to invoke Chrome Browser
+2020-06-11 16:20:48,567  INFO [main] CommonUtilities:57 - Finish: Successfully invoked Chrome Browser
+2020-06-11 16:20:48,567  INFO [main] CommonUtilities:78 - Start: Trying to maximize browser
+2020-06-11 16:20:49,735  INFO [main] CommonUtilities:80 - End: Successfully maximized browser window
+2020-06-11 16:20:49,764  INFO [main] CommonUtilities:103 - Start: Trying to navigate to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:20:55,531  INFO [main] CommonUtilities:105 - End: Successfully navigated to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:20:55,543  INFO [main] CommonUtilities:36 - ==============================================================
+2020-06-11 16:20:55,543  INFO [main] CommonUtilities:37 - Executing Test Case : validateUserLoginElementsAreDisplayed
+2020-06-11 16:20:55,561  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: email
+2020-06-11 16:20:56,277  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: email
+2020-06-11 16:20:56,355  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: password
+2020-06-11 16:20:56,400  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: password
+2020-06-11 16:20:56,458  INFO [main] CommonUtilities:43 - Successfully Executed Test Case : validateUserLoginElementsAreDisplayed
+2020-06-11 16:20:56,458  INFO [main] CommonUtilities:44 - ==============================================================
+2020-06-11 16:20:56,465  INFO [main] CommonUtilities:261 - Start: Trying to close browser
+2020-06-11 16:20:57,605  INFO [main] CommonUtilities:263 - End: Successfully closed browser
+2020-06-11 16:20:57,610  INFO [main] CommonUtilities:49 - Start: Trying to invoke Chrome Browser
+2020-06-11 16:21:09,059  INFO [main] CommonUtilities:57 - Finish: Successfully invoked Chrome Browser
+2020-06-11 16:21:09,060  INFO [main] CommonUtilities:78 - Start: Trying to maximize browser
+2020-06-11 16:21:10,223  INFO [main] CommonUtilities:80 - End: Successfully maximized browser window
+2020-06-11 16:21:10,249  INFO [main] CommonUtilities:103 - Start: Trying to navigate to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:21:16,564  INFO [main] CommonUtilities:105 - End: Successfully navigated to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:21:16,569  INFO [main] CommonUtilities:36 - ==============================================================
+2020-06-11 16:21:16,570  INFO [main] CommonUtilities:37 - Executing Test Case : validateBrokenLinks
+2020-06-11 16:21:16,571  INFO [main] CommonUtilities:160 - Start: Trying to insert data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:21:16,571  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: email
+2020-06-11 16:21:18,333  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: email
+2020-06-11 16:21:18,842  INFO [main] CommonUtilities:163 - End: Successfully inserted data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:21:18,843  INFO [main] CommonUtilities:160 - Start: Trying to insert data- 79Edulence in field - By.id: password
+2020-06-11 16:21:18,844  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: password
+2020-06-11 16:21:18,896  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: password
+2020-06-11 16:21:19,239  INFO [main] CommonUtilities:163 - End: Successfully inserted data- 79Edulence in field - By.id: password
+2020-06-11 16:21:19,239  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@type='submit']
+2020-06-11 16:21:19,239  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@type='submit']
+2020-06-11 16:21:19,290  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@type='submit']
+2020-06-11 16:21:19,423  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@type='submit']
+2020-06-11 16:21:19,424  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:21:19,424  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:21:24,502  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:21:24,800  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:21:52,432  INFO [main] CommonUtilities:43 - Successfully Executed Test Case : validateBrokenLinks
+2020-06-11 16:21:52,433  INFO [main] CommonUtilities:44 - ==============================================================
+2020-06-11 16:21:52,433  INFO [main] CommonUtilities:261 - Start: Trying to close browser
+2020-06-11 16:21:53,693  INFO [main] CommonUtilities:263 - End: Successfully closed browser
+2020-06-11 16:21:53,695  INFO [main] CommonUtilities:49 - Start: Trying to invoke Chrome Browser
+2020-06-11 16:21:56,974  INFO [main] CommonUtilities:57 - Finish: Successfully invoked Chrome Browser
+2020-06-11 16:21:56,975  INFO [main] CommonUtilities:78 - Start: Trying to maximize browser
+2020-06-11 16:21:58,125  INFO [main] CommonUtilities:80 - End: Successfully maximized browser window
+2020-06-11 16:21:58,150  INFO [main] CommonUtilities:103 - Start: Trying to navigate to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:07,352  INFO [main] CommonUtilities:105 - End: Successfully navigated to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:07,354  INFO [main] CommonUtilities:36 - ==============================================================
+2020-06-11 16:22:07,355  INFO [main] CommonUtilities:37 - Executing Test Case : validateUserLogin
+2020-06-11 16:22:07,356  INFO [main] CommonUtilities:160 - Start: Trying to insert data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:07,356  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: email
+2020-06-11 16:22:07,449  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: email
+2020-06-11 16:22:08,108  INFO [main] CommonUtilities:163 - End: Successfully inserted data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:08,109  INFO [main] CommonUtilities:160 - Start: Trying to insert data- 79Edulence in field - By.id: password
+2020-06-11 16:22:08,109  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: password
+2020-06-11 16:22:08,163  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: password
+2020-06-11 16:22:08,558  INFO [main] CommonUtilities:163 - End: Successfully inserted data- 79Edulence in field - By.id: password
+2020-06-11 16:22:08,558  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:08,559  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:08,604  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:08,749  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:08,749  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:08,749  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:13,582  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:13,864  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:13,864  INFO [main] CommonUtilities:252 - Fetching the URL of the webpage
+2020-06-11 16:22:13,895  INFO [main] CommonUtilities:43 - Successfully Executed Test Case : validateUserLogin
+2020-06-11 16:22:13,895  INFO [main] CommonUtilities:44 - ==============================================================
+2020-06-11 16:22:13,896  INFO [main] CommonUtilities:261 - Start: Trying to close browser
+2020-06-11 16:22:14,996  INFO [main] CommonUtilities:263 - End: Successfully closed browser
+2020-06-11 16:22:14,998  INFO [main] CommonUtilities:49 - Start: Trying to invoke Chrome Browser
+2020-06-11 16:22:17,952  INFO [main] CommonUtilities:57 - Finish: Successfully invoked Chrome Browser
+2020-06-11 16:22:17,953  INFO [main] CommonUtilities:78 - Start: Trying to maximize browser
+2020-06-11 16:22:19,111  INFO [main] CommonUtilities:80 - End: Successfully maximized browser window
+2020-06-11 16:22:19,134  INFO [main] CommonUtilities:103 - Start: Trying to navigate to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:24,787  INFO [main] CommonUtilities:105 - End: Successfully navigated to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:24,787  INFO [main] CommonUtilities:160 - Start: Trying to insert data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:24,788  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: email
+2020-06-11 16:22:25,945  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: email
+2020-06-11 16:22:26,344  INFO [main] CommonUtilities:163 - End: Successfully inserted data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:26,344  INFO [main] CommonUtilities:160 - Start: Trying to insert data- 79Edulence in field - By.id: password
+2020-06-11 16:22:26,344  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: password
+2020-06-11 16:22:26,384  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: password
+2020-06-11 16:22:26,628  INFO [main] CommonUtilities:163 - End: Successfully inserted data- 79Edulence in field - By.id: password
+2020-06-11 16:22:26,628  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:26,628  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:26,675  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:26,775  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:26,775  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:26,775  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:31,664  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:32,343  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:32,344  INFO [main] CommonUtilities:36 - ==============================================================
+2020-06-11 16:22:32,345  INFO [main] CommonUtilities:37 - Executing Test Case : navigateToAdminPage
+2020-06-11 16:22:32,346  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:32,346  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:32,422  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:32,658  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:32,659  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.linkText: Admin page
+2020-06-11 16:22:32,660  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.linkText: Admin page
+2020-06-11 16:22:32,720  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.linkText: Admin page
+2020-06-11 16:22:32,813  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.linkText: Admin page
+2020-06-11 16:22:37,815  INFO [main] CommonUtilities:252 - Fetching the URL of the webpage
+2020-06-11 16:22:37,838  INFO [main] CommonUtilities:52 - Test Case execution Failed : navigateToAdminPage
+2020-06-11 16:22:37,840  INFO [main] CommonUtilities:53 - ==============================================================
+2020-06-11 16:22:38,978  INFO [main] CommonUtilities:261 - Start: Trying to close browser
+2020-06-11 16:22:39,975  INFO [main] CommonUtilities:263 - End: Successfully closed browser
+2020-06-11 16:22:39,978  INFO [main] CommonUtilities:49 - Start: Trying to invoke Chrome Browser
+2020-06-11 16:22:43,201  INFO [main] CommonUtilities:57 - Finish: Successfully invoked Chrome Browser
+2020-06-11 16:22:43,201  INFO [main] CommonUtilities:78 - Start: Trying to maximize browser
+2020-06-11 16:22:44,338  INFO [main] CommonUtilities:80 - End: Successfully maximized browser window
+2020-06-11 16:22:44,364  INFO [main] CommonUtilities:103 - Start: Trying to navigate to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:51,589  INFO [main] CommonUtilities:105 - End: Successfully navigated to URL- https://edulence.knowledgelink.tv/
+2020-06-11 16:22:51,592  INFO [main] CommonUtilities:160 - Start: Trying to insert data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:51,593  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: email
+2020-06-11 16:22:52,061  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: email
+2020-06-11 16:22:52,411  INFO [main] CommonUtilities:163 - End: Successfully inserted data- demo@knowledgelink.tv in field - By.id: email
+2020-06-11 16:22:52,413  INFO [main] CommonUtilities:160 - Start: Trying to insert data- 79Edulence in field - By.id: password
+2020-06-11 16:22:52,413  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.id: password
+2020-06-11 16:22:52,455  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.id: password
+2020-06-11 16:22:52,696  INFO [main] CommonUtilities:163 - End: Successfully inserted data- 79Edulence in field - By.id: password
+2020-06-11 16:22:52,696  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:52,697  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:52,746  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:52,863  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@type='submit']
+2020-06-11 16:22:52,863  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:52,864  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:57,999  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:58,644  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //button[@ng-click='submit()']
+2020-06-11 16:22:58,644  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:58,644  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:58,698  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:58,797  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //div[@class='toggle-btn unselectable usr-user-dropdown']
+2020-06-11 16:22:58,798  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.linkText: Admin page
+2020-06-11 16:22:58,798  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.linkText: Admin page
+2020-06-11 16:22:58,904  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.linkText: Admin page
+2020-06-11 16:22:59,017  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.linkText: Admin page
+2020-06-11 16:22:59,019  INFO [main] CommonUtilities:36 - ==============================================================
+2020-06-11 16:22:59,019  INFO [main] CommonUtilities:37 - Executing Test Case : createNewMediaGroups
+2020-06-11 16:22:59,020  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //a[@href='/admin/settings/account']
+2020-06-11 16:22:59,020  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //a[@href='/admin/settings/account']
+2020-06-11 16:23:04,822  INFO [main] CommonUtilities:134 - 	End: Successfully located element- By.xpath: //a[@href='/admin/settings/account']
+2020-06-11 16:23:04,947  INFO [main] CommonUtilities:174 - End: Successfully clicked on element- By.xpath: //a[@href='/admin/settings/account']
+2020-06-11 16:23:04,947  INFO [main] CommonUtilities:172 - Start: Trying to click element- By.xpath: //a[@href='/admin/settings/mediagroupp']
+2020-06-11 16:23:04,947  INFO [main] CommonUtilities:130 - 	Start: Trying to locate element- By.xpath: //a[@href='/admin/settings/mediagroupp']
+2020-06-11 16:23:25,639  INFO [main] CommonUtilities:52 - Test Case execution Failed : createNewMediaGroups
+2020-06-11 16:23:25,640  INFO [main] CommonUtilities:53 - ==============================================================
+2020-06-11 16:23:26,100  INFO [main] CommonUtilities:261 - Start: Trying to close browser
+2020-06-11 16:23:26,886  INFO [main] CommonUtilities:263 - End: Successfully closed browser
+2020-06-11 16:23:26,927  INFO [main] CommonUtilities:95 - Finished execution of Test Suite
+2020-06-11 16:23:26,928  INFO [main] CommonUtilities:96 - ##############################################################
+2020-06-11 16:23:27,104 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2020-06-11 16:23:27,107 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2020-06-11 16:23:27,112 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2020-06-11 16:23:27,114 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2020-06-11 16:23:27,114 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/Piyush/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"

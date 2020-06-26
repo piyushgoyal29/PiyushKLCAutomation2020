@@ -9,7 +9,30 @@
       <class name="testCases.LoginPageTest"/>
       <class name="testCases.DashboardPageTest"/>
       <class name="testCases.Admin_SettingsPageTest"/>
-      <class name="testCases.Admin_UserPageTest"/>
     </classes>
   </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="testCases.DashboardPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="navigateToAdminPage"/>
+          <include name="testSetUp"/>
+        </methods>
+      </class> <!-- testCases.DashboardPageTest -->
+      <class name="testCases.LoginPageTest">
+        <methods>
+          <include name="testSetUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.LoginPageTest -->
+      <class name="testCases.Admin_SettingsPageTest">
+        <methods>
+          <include name="testSetUp"/>
+          <include name="createNewMediaGroups"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- testCases.Admin_SettingsPageTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

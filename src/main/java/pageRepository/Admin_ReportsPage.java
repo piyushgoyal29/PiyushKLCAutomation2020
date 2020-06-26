@@ -9,9 +9,9 @@ import utils.CommonUtilities;
 
 public class Admin_ReportsPage extends CommonUtilities
 {
-	By startDatePicker = By.xpath("//input[@ng-model='report.dates.startDate']");
-	By endDatePicker = By .xpath("//input[@ng-model='report.dates.endDate']");
-	By yearSelector = By.xpath("(//button[@role='heading'])[1]");
+	private By startDatePicker = By.xpath("//input[@ng-model='report.dates.startDate']");
+	private By endDatePicker = By .xpath("//input[@ng-model='report.dates.endDate']");
+	private By yearSelector = By.xpath("(//button[@role='heading'])[1]");
 
 	
 	public void selectDate(String expectedDate)

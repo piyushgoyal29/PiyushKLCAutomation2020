@@ -8,9 +8,10 @@
   <test name="Test">
     <classes>
       <class name="testCases.LoginPageTest"/>
-      <class name="testCases.DashboardPageTest"/>
-      <class name="testCases.Admin_SettingsPageTest"/>
-      <class name="testCases.Admin_UserPageTest"/>
+<!--       <class name="testCases.DashboardPageTest"/> -->
+<!--       <class name="testCases.Admin_SettingsPageTest"/> -->
+<!--       <class name="testCases.Admin_UserPageTest"/> -->
+<!--       <class name="testCases.Admin_ReportsPageTest"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

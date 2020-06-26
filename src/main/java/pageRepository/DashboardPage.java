@@ -41,34 +41,37 @@ public class DashboardPage extends CommonUtilities
 		clickMethod(dropdownOptionAdmin);
 	}
 	
-	public void automateVideoSessions() throws InterruptedException
-	{
-		
-		driver.get("https://edulence.knowledgelink.tv/session/videonew/course/uatnew");
-		Thread.sleep(10000);
-		driver.findElement(By.xpath("(//div[@ng-click='play()'])[2]")).click();
-//		JavascriptExecutor execute= (JavascriptExecutor)driver;
-//		execute.executeScript("arguments[0].click();", driver.findElement(By.xpath("(//div[@ng-click='play()'])[2]")));
-		
-		String totalTime = driver.findElement(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[3]")).getText();
-		String progressTime = driver.findElement(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[1]")).getText();
-		
+	/**
+	 * automateVideoSessions() method is created to just have a idea of how the KLC video sessions could be automated using selenium webdriver.
+	 * Note: Since KLC is not completely accurate in terms of displaying video progress, so I have commented this code.
+	 * But the logic of automating KLC video sessions using webdriver, works like below-
+	 * 	1. Navigate to the video session.
+	 * 	2. Validate that the progress is yet-to-start
+	 * 	3. Fetch actual time duration of the video.
+	 * 	4. Start the video.
+	 * 	5. Validate that the status got changed to in-progress.
+	 * 	6. Validate that the status changes to complete only when the 'progress time duration' matches the 'actual time duration'.
+	 */
+//	public void automateVideoSessions() throws InterruptedException
+//	{
+//		
+//		getMethod("https://edulence.knowledgelink.tv/session/videonew/course/uatnew");
+//		Thread.sleep(10000);
+//		findElementMethod(By.xpath("(//div[@ng-click='play()'])[2]")).click();
+//		
+//		String totalTime = findElementMethod(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[3]")).getText();
+//		String progressTime = findElementMethod(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[1]")).getText();
+//		
 //		while(!totalTime.equals(progressTime))
 //		{
-//			String progress = driver.findElement(By.xpath("//div[@class='progress-container']/span")).getText();
+//			String progress = findElementMethod(By.xpath("//div[@class='progress-container']/span")).getText();
 //			if(progress.contains("100% complete"))
 //			{
 //				Assert.fail();//Assert Failed
 //			}
-//			else
-//			{
-//				Assert.assertTrue(true); //Assert Passed
-//			}
-//			progressTime = driver.findElement(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[1]")).getText();
+//			progressTime = findElementMethod(By.xpath("//div[@ng-show='showControl']/table/tbody/tr/td[3]/span[1]")).getText();
 //		}
 //		
-//		Assert.assertEquals(driver.findElement(By.xpath("//div[@class='progress-container']/span")).getText(), "100% complete");
-	}
-	
-	
+//		Assert.assertEquals(findElementMethod(By.xpath("//div[@class='progress-container']/span")).getText(), "100% complete");
+//	}
 }

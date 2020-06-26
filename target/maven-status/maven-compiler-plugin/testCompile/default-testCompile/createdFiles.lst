@@ -1,0 +1,5 @@
+testCases\Admin_UserPageTest.class
+testCases\DashboardPageTest.class
+testCases\Admin_ReportsPageTest.class
+testCases\Admin_SettingsPageTest.class
+testCases\LoginPageTest.class

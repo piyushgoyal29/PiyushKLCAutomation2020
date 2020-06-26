@@ -1,5 +1,6 @@
 package testCases;
 
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,9 +32,22 @@ public class Admin_ReportsPageTest
 		dashboardPage.clickOnDropdownOptionAdmin();
 	}
 	
+	/**
+	 * selectDate() method is used to select the date on the reports page.
+	 */
 	@Test
 	public void selectDate(){
 		adminReportsPage.selectDate(ReadPropertiesFile.getPropertyValue("reportsExpectedStartDate"));
+	}
+	
+	/**
+	 * tearDown method is used to close the browser.
+	 * This method will be invoked after executing each @Test method of this class. 
+	 */
+	@AfterMethod
+	public void tearDown()
+	{
+		commonUtilities.quitBrowserMethod();
 	}
 	
 }

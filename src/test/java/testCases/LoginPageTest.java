@@ -1,7 +1,10 @@
 package testCases;
 
 
-import org.openqa.selenium.WebDriver;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map.Entry;
+
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -10,6 +13,7 @@ import org.testng.asserts.SoftAssert;
 
 import pageRepository.LoginPage;
 import utils.CommonUtilities;
+import utils.FindBrokenLinks;
 import utils.ReadPropertiesFile;
 
 public class LoginPageTest 
@@ -45,11 +49,31 @@ public class LoginPageTest
 	}
 	
 	/**
+	 * validateBrokenLinks() method is used to-
+	 * identify if there are any broken links on the webpage.
+	 */
+	@Test(description="Verify if links are broken", priority=1)
+	public void validateBrokenLinks() throws IOException
+	{
+		loginPage.login(ReadPropertiesFile.getPropertyValue("username"), ReadPropertiesFile.getPropertyValue("password"));
+	
+		SoftAssert softAssert = new SoftAssert();
+		HashMap<String, Integer> responseCodeOfLinks = FindBrokenLinks.verifyLinks();
+
+		for(Entry<String, Integer> data : responseCodeOfLinks.entrySet()) {
+			String url = data.getKey();
+		    int responseCode = (int)data.getValue();
+		    softAssert.assertEquals(responseCode, 200, "for URL: "+url);
+		}
+		softAssert.assertAll();
+	}
+	
+	/**
 	 * validateUserLogin method is used to-
 	 * validate that user logs into the application with-
 	 * correct credentials.
 	 */
-	@Test(description="Verify login functionality", priority=1)
+	@Test(description="Verify login functionality", priority=2)
 	public void validateUserLogin()
 	{
 		loginPage.login(ReadPropertiesFile.getPropertyValue("username"), ReadPropertiesFile.getPropertyValue("password"));

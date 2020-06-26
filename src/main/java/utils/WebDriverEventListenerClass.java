@@ -116,7 +116,7 @@ public class WebDriverEventListenerClass extends CommonUtilities implements WebD
 	public void onException(Throwable error, WebDriver driver) {
 		log.info("Exception occurred :");
 		log.info("Throwable : " +error.toString());
-		//log.info("Exception throwed : "+arg0.getMessage());
+		//log.info("Exception thrown : "+arg0.getMessage());
 		log.info("WebDriver : " +driver.toString());
 	}
 }

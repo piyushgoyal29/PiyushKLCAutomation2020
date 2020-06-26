@@ -17,12 +17,12 @@ public class Admin_SettingsPage extends CommonUtilities{
 //		this.driver = driver;
 //	}
 	
-	By settings = By.xpath("//a[@href='/admin/settings/account']");
-	By mediaGroupSection = By.xpath("//a[@href='/admin/settings/mediagroup']");
-	By existingMediaGroups = By.xpath("//ul[@class='group-list']//li/div/p");
-	By newMediaGroupName= By.xpath("//input[@ng-model='newName']");
-	By newMediaGroupAbbreviation = By.xpath("//input[@ng-model='newAlias']");
-	By newMediaGroupButton = By.xpath("(//button[@class='btn btn-primary'])[1]");
+	private By settings = By.xpath("//a[@href='/admin/settings/account']");
+	private By mediaGroupSection = By.xpath("//a[@href='/admin/settings/mediagroup']");
+	private By existingMediaGroups = By.xpath("//ul[@class='group-list']//li/div/p");
+	private By newMediaGroupName= By.xpath("//input[@ng-model='newName']");
+	private By newMediaGroupAbbreviation = By.xpath("//input[@ng-model='newAlias']");
+	private By newMediaGroupButton = By.xpath("(//button[@class='btn btn-primary'])[1]");
 	
 	public void clickOnSettingsOption()
 	{

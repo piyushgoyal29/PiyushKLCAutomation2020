@@ -9,6 +9,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -22,6 +23,10 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import utils.ReadPropertiesFile;
 
+/**
+ * @author Piyush
+ *
+ */
 public class CommonUtilities 
 {
 	public static WebDriver driver;
@@ -29,57 +34,62 @@ public class CommonUtilities
 	public Actions actions;
 	public static WebDriverEventListenerClass webDriverListener;
 	public static EventFiringWebDriver eventFiringDriver;
-//	public static ExtentTest extentTest;
 	
+	
+	/**
+	 * invokeBrowser() method is used to invoke the specific browser, 
+	 * based on the browser value received from the Properties file.
+	 */
 	public void invokeBrowser() 
 	{			
 		String browserName = ReadPropertiesFile.getPropertyValue("browser");
 		
 		if(browserName.contains("chrome"))
 		{
-//			extentTest.log(LogStatus.INFO, "Start: Trying to invoke Chrome Browser");
 			log.info("Start: Trying to invoke Chrome Browser");
 			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\BrowserDrivers\\chromedriver.exe");
-			driver = new ChromeDriver();
+			
+			ChromeOptions options = new ChromeOptions();
+			options.setExperimentalOption("useAutomationExtension", false); //To disable the Chrome Automation Extension
+			options.addArguments("--disable-extensions"); //To disable the general Chrome Extensions			
+			driver = new ChromeDriver(options);
+			
 			log.info("Finish: Successfully invoked Chrome Browser");
-//			extentTest.log(LogStatus.INFO, "Finish: Successfully invoked Chrome Browser");
 		}
 		
 		else if(browserName.contains("firefox"))
 		{
-//			extentTest.log(LogStatus.INFO, "Start: Trying to invoke Firefox Browser");
 			log.info("Start: Trying to invoke Firefox Browser");
 			System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\BrowserDrivers\\geckodriver.exe");
 			driver = new FirefoxDriver();
 			log.info("Finish: Successfully invoked Firefox Browser");
-//			extentTest.log(LogStatus.INFO, "Finish: Successfully invoked Firefox Browser");
 		}
 		
 		else if(browserName.contains("internet"))
 		{
-//			extentTest.log(LogStatus.INFO, "Start: Trying to invoke IE Browser");
 			log.info("Start: Trying to invoke IE Browser");
 			System.setProperty("webdriver.ie.driver", System.getProperty("user.dir")+"\\BrowserDrivers\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			log.info("Finish: Successfully invoked IE Browser");
-//			extentTest.log(LogStatus.INFO, "Finish: Successfully invoked IE Browser");
 		}
 		
 		try
 		{
-//			extentTest.log(LogStatus.INFO, "Start: Trying to maximize browser");
 			log.info("Start: Trying to maximize browser");
 			driver.manage().window().maximize();
 			log.info("End: Successfully maximized browser window");
-//			extentTest.log(LogStatus.INFO, "End: Successfully maximized browser window");
 		}
 		catch(Exception e)
 		{
-//			extentTest.log(LogStatus.INFO, "End: Browser was already maximized");
 			log.info("End: Browser was already maximized");
 			//Browser is already maximized
 		}
 		
+		/*
+		 * Below code is used to implement WebDriverEventListener,
+		 * so that we could perform pre and post conditions before any desired webdriver activity.
+		 * WebDriverEventListener is used used for logging all the webdriver activities.
+		 */
 //		webDriverListener = new WebDriverEventListenerClass();
 //		eventFiringDriver = new EventFiringWebDriver(driver);
 //		eventFiringDriver.register(webDriverListener);
@@ -96,11 +106,25 @@ public class CommonUtilities
 //		return driver;
 	}
 
-	public WebDriver getDriver() {
-		return driver;
-	}
+//	public WebDriver getDriver() {
+//		return driver;
+//	}
 
+	/**
+	 * getMethod() is used to navigate to the URL.
+	 */
+	public void getMethod(String url)
+	{
+		log.info("Start: Trying to navigate to URL- "+url);
+		driver.get(url);
+		log.info("End: Successfully navigated to URL- "+url);
+	}
 	
+	/**
+	 * findElementMethod() is used to identify the webelement based on the received locator value.
+	 * @param locatorValue
+	 * @return WebElement
+	 */
 	public WebElement findElementMethod(By locatorValue)
 	{
 		log.info("	Start: Trying to locate element- "+locatorValue);
@@ -111,6 +135,11 @@ public class CommonUtilities
 		return element;
 	}
 	
+	/**
+	 * findElementsMethod() is used to identify the webelements based on the received locator value.
+	 * @param locatorValue
+	 * @return List<WebElement>
+	 */
 	public List<WebElement> findElementsMethod(By locatorValue)
 	{
 		log.info("	Start: Trying to locate elements- "+locatorValue);
@@ -121,6 +150,11 @@ public class CommonUtilities
 		return elements;
 	}
 	
+	/**
+	 * sendKeysMethod() is used to enter the received text in the received target webelement.
+	 * @param locatorValue
+	 * @param data
+	 */
 	public void sendKeysMethod(By locatorValue, String data)
 	{
 		log.info("Start: Trying to insert data- "+data +" in field - "+locatorValue);
@@ -129,6 +163,10 @@ public class CommonUtilities
 		log.info("End: Successfully inserted data- "+data +" in field - "+locatorValue);
 	}
 	
+	/**
+	 * clickMethod() is used to click on the received target webelement.
+	 * @param locatorValue
+	 */
 	public void clickMethod(By locatorValue)
 	{
 		log.info("Start: Trying to click element- "+locatorValue);
@@ -136,7 +174,10 @@ public class CommonUtilities
 		log.info("End: Successfully clicked on element- "+locatorValue);
 	}
 
-	
+	/**
+	 * selectMethod() is used to select the received target webelement.
+	 * @param locatorValue
+	 */
 	public void selectMethod(By locatorValue, String text)
 	{
 		Select select = new Select(findElementMethod(locatorValue));
@@ -144,11 +185,20 @@ public class CommonUtilities
 				
 	}
 	
+	
+	/**
+	 * createActionsClassObject() is used to create and return an object of the Actions Class.
+	 * @return Actions
+	 */
 	public Actions createActionsClassObject()
 	{
 		return actions = new Actions(driver);
 	}
 	
+	/**
+	 * moveToElementMethod() is used to move to the received target webelement.
+	 * @param locatorValue
+	 */
 	public void moveToElementMethod(By locatorValue)
 	{
 		log.info("Start: Trying to move to element- "+locatorValue);
@@ -156,6 +206,12 @@ public class CommonUtilities
 		log.info("End: Successfully moved to element- "+locatorValue);
 	}
 	
+	/**
+	 * moveToElementAndSendKeysMethod() is used to move to the received target webelement
+	 * and also enter the received text.
+	 * @param locatorValue
+	 * @param data
+	 */ 
 	public void moveToElementAndSendKeysMethod(By locatorValue, String data)
 	{
 		log.info("Trying to insert data- "+data +" in field - "+locatorValue);
@@ -163,6 +219,12 @@ public class CommonUtilities
 		log.info("End: Successfully inserted data- "+data +" in field - "+locatorValue);
 	}
 	
+	/**
+	 * dragAndDropMethod() is used to move the element from source to destination webelement.
+	 * and also enter the received text.
+	 * @param source
+	 * @param destination
+	 */ 
 	public void dragAndDropMethod(By source, By destination)
 	{
 		log.info("Start: Trying to drag from element - " +source +" to element- "+destination);
@@ -170,18 +232,30 @@ public class CommonUtilities
 		log.info("End: Successfully moved from element - " +source +" to element- "+destination);
 	}
 	
+	
+	/**
+	 * verifyTitleMethod() method is use to fetch the title of the current webpage.
+	 * @return String
+	 */
 	public String verifyTitleMethod()
 	{
 		log.info("Fetching the title of the webpage");
 		return driver.getTitle();
 	}
 	
+	/**
+	 * verifyURLMethod() method is use to fetch the URL of the current webpage.
+	 * @return String
+	 */
 	public String verifyURLMethod()
 	{
 		log.info("Fetching the URL of the webpage");
 		return driver.getCurrentUrl();
 	}
 	
+	/**
+	 * quitBrowserMethod() method is use to close all the browser windows opened by the webdriver.
+	 */
 	public void quitBrowserMethod()
 	{
 		log.info("Start: Trying to close browser");

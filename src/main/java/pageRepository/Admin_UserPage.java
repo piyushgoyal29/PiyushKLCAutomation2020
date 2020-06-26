@@ -21,31 +21,34 @@ public class Admin_UserPage extends CommonUtilities{
 //		this.driver = driver;
 //	}
 	
-	By users = By.xpath("//a[@href='/admin/users']");
-	By addNewUserDropdown = By.xpath("//button[@class='btn btn-edulence submit dropdown-toggle']");
-	By addNewUserDropdown_Option_AddUser = By.linkText("Add user");
-	By newUserFirstName = By.name("first_name");
-	By newUserLastName = By.name("last_name");
-	By newUserEmail = By.name("email");
-	By newUserPassword = By.xpath("//input[@ng-model='newPassword']");
-	By newUserReTypePassword = By.xpath("//input[@ng-model='newPasswordRepeat']");
-	By newUserUAT1 = By.name("UAT1");
-	By newUserUAT2 = By.name("UAT2");
-	By newUserUAT3 = By.name("UAT3");
-	By newUserUAT4 = By.name("UAT4");
-	By newUserUAT5 = By.name("UAT5");
-	By newUserUAT6 = By.name("UAT6");
-	By newUserUAT7 = By.name("UAT7");
-	By newUserUAT8 = By.name("UAT8");
-	By newUserUAT9 = By.name("UAT9");
-	By newUserUAT10 = By.name("UAT10");
-	By newUserMediaGroup = By.xpath("(//input[@ng-model='$select.search'])[3]");
-	By newUserEnterprise = By.xpath("(//span[@class='btn btn-default form-control ui-select-toggle'])[2]");
-	By newUserRole = By.xpath("//select[@ng-model='role']");
-	By newUserAddNewButton = By.xpath("//button[@class='btn btn-edulence submit ng-scope']");
-	By usersTableRowCount = By.xpath("//*[@id='page_users']/table/tbody/tr");
-	By usersTableColumnCount = By.xpath("//*[@id='page_users']/table/tbody/tr[1]/th");
+	private By users = By.xpath("//a[@href='/admin/users']");
+	private By addNewUserDropdown = By.xpath("//button[@class='btn btn-edulence submit dropdown-toggle']");
+	private By addNewUserDropdown_Option_AddUser = By.linkText("Add user");
+	private By newUserFirstName = By.name("first_name");
+	private By newUserLastName = By.name("last_name");
+	private By newUserEmail = By.name("email");
+	private By newUserPassword = By.xpath("//input[@ng-model='newPassword']");
+	private By newUserReTypePassword = By.xpath("//input[@ng-model='newPasswordRepeat']");
+	private By newUserUAT1 = By.name("UAT1");
+	private By newUserUAT2 = By.name("UAT2");
+	private By newUserUAT3 = By.name("UAT3");
+	private By newUserUAT4 = By.name("UAT4");
+	private By newUserUAT5 = By.name("UAT5");
+	private By newUserUAT6 = By.name("UAT6");
+	private By newUserUAT7 = By.name("UAT7");
+	private By newUserUAT8 = By.name("UAT8");
+	private By newUserUAT9 = By.name("UAT9");
+	private By newUserUAT10 = By.name("UAT10");
+	private By newUserMediaGroup = By.xpath("(//input[@ng-model='$select.search'])[3]");
+	private By newUserEnterprise = By.xpath("(//span[@class='btn btn-default form-control ui-select-toggle'])[2]");
+	private By newUserRole = By.xpath("//select[@ng-model='role']");
+	private By newUserAddNewButton = By.xpath("//button[@class='btn btn-edulence submit ng-scope']");
+	private By usersTableRowCount = By.xpath("//*[@id='page_users']/table/tbody/tr");
+	private By usersTableColumnCount = By.xpath("//*[@id='page_users']/table/tbody/tr[1]/th");
 
+	/*
+	 * addNewUsers() method is used to create new users in the system.
+	 */
 	public void addNewUsers(String firstNameData, String lastNameData, String emailData, 
 			String passwordData, String retypePasswordData, 
 			String uAT1Data, String uAT2Data, String uAT3Data, String uAT4Data, String uAT5Data, String uAT6Data, 
@@ -124,7 +127,6 @@ public class Admin_UserPage extends CommonUtilities{
 		    }    
 		}
 		
-
 		public int getUserPosition(String userEmailId) throws InterruptedException
 		{
 			int userPositioninTable = 0;
@@ -142,6 +144,9 @@ public class Admin_UserPage extends CommonUtilities{
 		}
 		
 
+	/*
+	 * validateDetailsOfNewCreatedUsers() method is used to validate details of the user.
+	 */
 	public HashMap<String, String> validateDetailsOfNewCreatedUsers(String userEmailId) throws InterruptedException
 	{
 	    HashMap<String, String> userDetails = new HashMap<String, String>();
@@ -153,6 +158,9 @@ public class Admin_UserPage extends CommonUtilities{
 	    return userDetails;
 	}
 	
+	/*
+	 * verifyIfUserIsPresent() method is used to validate if user is present in the system.
+	 */
 	public void verifyIfUserIsPresent(String userEmailId) throws InterruptedException
 	{
 		clickMethod(users);

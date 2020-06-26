@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -62,6 +63,13 @@ public class Admin_UserPageTest {
 		softAssert.assertAll();
 	}
 	
+	/**
+	 * getData method is used to-
+	 * 	- Read the excel sheet
+	 * 	- Store the data inside the Object array
+	 * @throws IOException 
+	 * returns Object
+	 */
 	@DataProvider
 	public Object[][] getData() throws IOException
 	{
@@ -70,10 +78,22 @@ public class Admin_UserPageTest {
 		return data;
 	}
 
+	/**
+	 * verifyIfUserExistsInTheSystem() method is used to verify if the user exists in the system
+	 */
 	@Test
 	public void verifyIfUserExistsInTheSystem() throws InterruptedException
 	{
 		adminUsersPage.verifyIfUserIsPresent(ReadPropertiesFile.getPropertyValue("username"));
 	}
 	
+	/**
+	 * tearDown method is used to close the browser.
+	 * This method will be invoked after executing each @Test method of this class. 
+	 */
+	@AfterMethod
+	public void tearDown()
+	{
+		commonUtilities.quitBrowserMethod();
+	}
 }

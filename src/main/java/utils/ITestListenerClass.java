@@ -49,8 +49,9 @@ public class ITestListenerClass extends CommonUtilities implements ITestListener
 
 	public void onTestFailure(ITestResult result) //ITestResult is a class which provides the details on the result. Like the name of the method which failed, class details, etc.
 	{
-		log.info("Test Case execution Failed : "+result.getName());
-		log.info("==============================================================");
+		log.error("Test Case execution Failed : "+result.getName());
+		log.error("======================     FAILED    =========================");
+		log.error("==============================================================");
 		
 //		Object currentClass = result.getInstance();
 //		WebDriver driver = ((CommonUtilities) currentClass).getDriver();
@@ -62,7 +63,7 @@ public class ITestListenerClass extends CommonUtilities implements ITestListener
 		//Call getScreenshotAs method to create an image file
 		
 		String screenshotPath = System.getProperty("user.dir") + "\\Screenshots\\" +result.getName() +"_"+timeStamp +".png";
-		System.out.println(screenshotPath);		
+//		System.out.println(screenshotPath);		
 		
 		File sourceFile= screenShot.getScreenshotAs(OutputType.FILE);
 
